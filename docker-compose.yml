@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+
+  minepkg:
+    build:
+      context: .
+    command: fettlol-beta
+    container_name: minepkg
+    restart: unless-stopped
+    network_mode: "host"
+    ports:
+      - "24454:24454"
+    volumes:
+      - ./config:/root/.config/minepkg
